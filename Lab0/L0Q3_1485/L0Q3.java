@@ -1,4 +1,4 @@
-package Q3_1485;
+package L0Q3_1485;
 
 import java.math.BigInteger;
 import java.util.Scanner;

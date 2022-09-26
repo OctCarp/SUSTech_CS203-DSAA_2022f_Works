@@ -1,4 +1,4 @@
-package Q2_1484;
+package L0Q2_1484;
 
 import java.util.ArrayList;
 import java.util.Scanner;
