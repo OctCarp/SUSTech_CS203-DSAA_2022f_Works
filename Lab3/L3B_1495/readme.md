@@ -1,4 +1,4 @@
-## Shopping
+## Problem B: Shopping
 
 Time Limit: 1 Sec Memory Limit: 512 MB
 

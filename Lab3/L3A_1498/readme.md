@@ -1,4 +1,4 @@
-## Polynomial Summation
+## Problem A: Polynomial Summation
 
 Time Limit: 2 Sec Memory Limit: 512 MB
 
