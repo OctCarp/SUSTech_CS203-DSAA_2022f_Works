@@ -10,9 +10,9 @@ Given two arrays $A$ and $B$ with the same length $n−1$. We want to insert two
 
 The 1st line contains two integers: $n,h (2≤n≤10^5,1≤h≤10^9)$
 
-The 2nd line contains $n−1$ integers: $A_1,A_2,...,A_{n−1}$,all element in AA is between $[1,h]$
+The 2nd line contains $n−1$ integers: $A_1,A_2,...,A_{n−1}$,all element in $A$ is between $[1,h]$
 
-The 3rd line contains $n−1$ integers, $B_1,B_2,...,B_{n−1}$,all element in BB is between $[1,h]$
+The 3rd line contains $n−1$ integers, $B_1,B_2,...,B_{n−1}$,all element in $B$ is between $[1,h]$
 
 ## Output
 

@@ -10,7 +10,7 @@ Lihua defines Magic Number as that if you rotate the number 180 degrees the numb
 
 There are multiple test cases (less than 5), each test will contain two integers $L$ and $R$.
 
-Note that the range of $L$ and $R$ is $0≤L≤R≤10^12$, it is guaranteed there is a least one magic number between $L$ and $R$(inclusive)
+Note that the range of $L$ and $R$ is $0≤L≤R≤10^{12}$, it is guaranteed there is a least one magic number between $L$ and $R$(inclusive)
 
 ## Output
 

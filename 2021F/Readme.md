@@ -2,7 +2,7 @@
 
 | ID   | Name                                                         | AC   |
 | ---- | ------------------------------------------------------------ | ---- |
-| 1091 | [CS203 2021 Fall Welcome Lab](Lab01_1091/)                   | /6   |
+| 1091 | [CS203 2021 Fall Welcome Lab](Lab01_1091/)                   | 6/6  |
 | 1093 | [CS203 2021 Fall Lab 02 Complexity + Binary Search](Lab02_1093/) | /6   |
 | 1095 | [CS203 2021 Fall Lab 03 Sorting](Lab03_1095/)                | /6   |
 | 1097 | [CS203 2021 Fall Lab 04 LinkedList](Lab04_1097/)             | /6   |
