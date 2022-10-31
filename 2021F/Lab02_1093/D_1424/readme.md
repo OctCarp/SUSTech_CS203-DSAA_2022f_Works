@@ -6,7 +6,7 @@ Time Limit: 1 Sec Memory Limit: 256 MB
 
 Given a nondecreasing sequence $a$ with $n$ integer $a_1,a_2,...,a_n$.
 
-Please find the number of pairs of indexes $i,j(i<j)$ that $a_i+a_j$ is a power of $2$ .
+Please find the number of pairs of indexes $i,j(i＜j)$ that $a_i+a_j$ is a power of $2$ .
 
 ## Input
 
@@ -16,7 +16,7 @@ The 2nd line contains $n$ integers: $a_1,a_2,...,a_n$. For each $a_i(1⩽a_i⩽1
 
 ## Output
 
-Print the the number of pairs of indexes $i,j(i<j)$ that $a_i+a_j$ is a power of $2$.
+Print the the number of pairs of indexes $i,j(i＜j)$ that $a_i+a_j$ is a power of $2$.
 
 ## Sample Input
 
