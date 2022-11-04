@@ -8,7 +8,7 @@ Given a sequence $\{a_1,a_2,...,a_n\}$ with $n$ numbers.
 
 Please output the **double** of the median of $\{a\}$.
 
-The definition of the median: Assume mm is the median of $\{a\}$:
+The definition of the median: Assume $m$ is the median of $\{a\}$:
 
 - if $n$ is odd, then $2m=2a_{\frac {n+1}{2}}$;
 - if $n$ is even, then $2m=a_{\frac {n}{2}}+a_{\frac {n}{2}+1}$
