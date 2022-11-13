@@ -10,7 +10,7 @@ Note that the track may pass through the same coordinates, but they are not the 
 
 However, you find that the control system is malfunctioning and you can only give the same command to both robots at the same time.
 
-Now you are giving the track of the two robots. If it is possible to let them reach their destinations at the same time?
+Now you are giving the track of the two robots. If it is possible to let them stay at their destinations at the same time?
 
 ## Input
 
@@ -20,11 +20,11 @@ The second line of the input contains a string which has $n−1$ characters, eac
 
 The third line of the input contains a string which has $n−1$ characters, each of them is either 'N', 'E', 'S', or 'W'. It is the track of the second robot from the starting point to the destination.
 
-It is guaranteed that the track won't have ambiguous cases like (1,1)-(2,1)-(1,1).
+It is guaranteed that the track won't contain the case that two successive steps have opposite directions,  ambiguous cases like (1,1)-(2,1)-(1,1).
 
 ## Output
 
-Print "YES" if it is possible for both robots to stay at the destination at the same time. Otherwise, print "NO".
+Print "`YES`" if it is possible for both robots to stay at the destination at the same time. Otherwise, print "`NO`".
 
 ## Sample Input
 
