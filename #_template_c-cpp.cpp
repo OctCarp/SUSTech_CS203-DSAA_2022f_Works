@@ -29,6 +29,10 @@ void write(int x) {
     return;
 }
 
+void disable() { //C++ disables the io synchronization
+    std::ios_base::sync_with_stdio(0), std::cin.tie(0), std::cout.tie(0);
+}
+
 //fast long readL & writeL
 ll readL() {
     ll s = 0, f = 1;
