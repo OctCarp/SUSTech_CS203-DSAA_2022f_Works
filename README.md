@@ -1,10 +1,8 @@
 # SUSTech_CS203-DSAA_22f_MyAnswer
 
-## 2021 Fall [Open](2021F/)
+You can check [**SUSTech Online Judge**](https://acm.sustech.edu.cn/onlinejudge/) for original information, though I upload descriptions in [![](https://img.shields.io/badge/-Markdown-white?style=flat&logo=markdown&logoColor=black)](https://www.markdownguide.org/) for every significant problem I done.
 
-I may not have enough time and energy to do this part in the rest of current semester.
-
-（各种 quiz project exam，请问你们有什么头绪吗？）
+Besides, it has an OJ system for SUSTech students.
 
 ## 2022 Fall Contest
 
@@ -16,8 +14,14 @@ I may not have enough time and energy to do this part in the rest of current sem
 | 1118 | [CS203 2022 Fall Lab 3 LinkedList](Lab3_1118/)               | 5/5  |
 | 1120 | [CS203 2022 Fall Lab 4 Stack/Queue](Lab4_1120/)              | 4/4  |
 | 1122 | [CS203 2022 Fall Lab 5 String](Lab5_1122/)                   | 4/4  |
+| 1124 | [CS203 2022 Fall Lab 6 Tree](Lab6_1124/)                     | /4   |
 |      |                                                              |      |
 |      |                                                              |      |
 |      |                                                              |      |
 |      |                                                              |      |
-|      |                                                              |      |
+
+## 2021 Fall [Open](2021F/)
+
+I may not have enough time and energy to do this part in the rest of current semester.
+
+（各种 quiz project exam，和剩下的 Lab，请问你们有什么头绪吗？）
