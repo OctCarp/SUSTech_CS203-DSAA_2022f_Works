@@ -87,3 +87,25 @@ std::string readStr() {
     }
     return str;
 }
+
+// fast generic & varargs read
+template<typename T>
+inline void readT(T &x) {
+    T s = 0, f = 1;
+    T ch = getchar();
+    while (!std::isdigit(ch)) {
+        if (ch == '-') f = -f;
+        ch = getchar();
+    }
+    while (std::isdigit(ch)) {
+        s = (s << 1) + (s << 3) + (ch ^ '0');
+        ch = getchar();
+    }
+    x = s * f;
+}
+
+template<typename T, typename ...Args>
+inline void readTs(T &x, Args &...args) {
+    readT(x);
+    readTs(args...);
+}
