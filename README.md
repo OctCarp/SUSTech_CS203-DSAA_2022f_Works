@@ -16,7 +16,7 @@ Besides, it has an OJ system for SUSTech students.
 | 1122 | [CS203 2022 Fall Lab 5 String](Lab5_1122/)                   | 4/4  |
 | 1124 | [CS203 2022 Fall Lab 6 Tree](Lab6_1124/)                     | 4/4  |
 | 1126 | [CS203 2022 Fall Lab 7 Advanced Tree](Lab7_1126/)            | 3/4  |
-| 1128 | [CS203 2022 Fall Lab 8 Basic Graph](Lab8_1128/)              | /4   |
+| 1128 | [CS203 2022 Fall Lab 8 Basic Graph](Lab8_1128/)              | 4/4  |
 | 1130 | [CS203 2022 Fall Lab 9 Advanced Graph](Lab9_1130/)           | /4   |
 |      |                                                              |      |
 

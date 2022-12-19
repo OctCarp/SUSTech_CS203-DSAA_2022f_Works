@@ -5,6 +5,7 @@ Time Limit: 1 Sec Memory Limit: 128 MB
 ## Description
 
 Given an array $a_1,a_2,...,a_n$ which means the degree of nodes.
+Satori wants to know if there is an undirected graph/a simple undirected graph/a tree whose sequence of degrees = array a.
 
 ![1510_Description](1510_Description.png)
 
