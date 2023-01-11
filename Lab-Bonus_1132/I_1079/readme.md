@@ -4,7 +4,7 @@ Time Limit: 1 Sec Memory Limit: 128 MB
 
 ## Description
 
-In SUSTech, if you want to select a course, you have to learn the prerequisite course at first. As you know, Itakejgo wants to be a student in Department of CSE. He has to learn n courses. The prerequisite information is given. Please find a way to select courses. If there are multiple ways, print the one with minimum alphabet order. Besides, the information may be wrong. If you cannot find such a way to select courses, print “impossible” (without quotes). The courses are labeled from $1$ to $n$.
+In SUSTech, if you want to select a course, you have to learn the prerequisite course at first. As you know, Itakejgo wants to be a student in Department of CSE. He has to learn n courses. The prerequisite information is given. Please find a way to select courses. If there are multiple ways, print the one with minimum alphabet order. Besides, the information may be wrong. If you cannot find such a way to select courses, print “`impossible`” (without quotes). The courses are labeled from $1$ to $n$.
 
 Note: the input guarantees that no courses are required the same course twice.
 

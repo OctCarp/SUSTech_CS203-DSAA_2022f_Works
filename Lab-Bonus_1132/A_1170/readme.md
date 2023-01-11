@@ -4,7 +4,7 @@ Time Limit: 1 Sec Memory Limit: 128 MB
 
 ## Description
 
-Give you $n$ integers $a_1,a_2,…,a_n$. Please find two integers $ai$ and $a_j$ $(i<j)$, such that $a_i–a_j$ is maximum.
+Give you $n$ integers $a_1,a_2,…,a_n$. Please find two integers $a_i$ and $a_j$ $(i＜j)$, such that $a_i–a_j$ is maximum.
 
 ## Input
 

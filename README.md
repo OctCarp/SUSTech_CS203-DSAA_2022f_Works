@@ -1,4 +1,4 @@
-# SUSTech_CS203-DSAA_22f_MyAnswer
+# SUSTech_CS203-DSAA_2022f_MyAnswer
 
 You can check [**SUSTech Online Judge**](https://acm.sustech.edu.cn/onlinejudge/) for original information, though I upload descriptions in [![](https://img.shields.io/badge/-Markdown-white?style=flat&logo=markdown&logoColor=black)](https://www.markdownguide.org/) for every significant problem I done.
 
@@ -18,7 +18,7 @@ Besides, it has an OJ system for SUSTech students.
 | 1126 | [CS203 2022 Fall Lab 7 Advanced Tree](Lab7_1126/)            | 3/4  |
 | 1128 | [CS203 2022 Fall Lab 8 Basic Graph](Lab8_1128/)              | 4/4  |
 | 1130 | [CS203 2022 Fall Lab 9 Advanced Graph](Lab9_1130/)           | 4/4  |
-| 1132 | [2022 Fall Bonus Lab](Lab-Bonus_1132/)                       | /A   |
+| 1132 | [2022 Fall Bonus Lab](Lab-Bonus_1132/)                       | A/A  |
 
 ## 2021 Fall [open](2021F/)
 

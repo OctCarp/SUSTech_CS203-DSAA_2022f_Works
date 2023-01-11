@@ -17,7 +17,7 @@ The most important thing is the first column are adjacent to the last column.
 
 ## Input
 
-The first line will be an integer $T$, which is the number of the test cases $(1≤T≤10)$. For each test case, the first line will be two integers $n$ and $m(1≤n≤1000,1≤m≤1000)$. The following are $n$ lines, and each line will be $m$ integers. The $j$-th integer in the $i$-th line means the color of the grid$(i, j)$ (1≤ color≤ 5).
+The first line will be an integer $T$, which is the number of the test cases $(1≤T≤10)$. For each test case, the first line will be two integers $n$ and $m(1≤n≤1000,1≤m≤1000)$. The following are $n$ lines, and each line will be $m$ integers. The $j$-th integer in the $i$-th line means the color of the grid $(i, j)$ (1≤ color≤ 5).
 
 ## Output
 
