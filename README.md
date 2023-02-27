@@ -4,6 +4,8 @@ You can check [**SUSTech Online Judge**](https://acm.sustech.edu.cn/onlinejudge/
 
 Besides, it has an OJ system for SUSTech students.
 
+In Lab **0-3**, I wrote some codes in **Java**. From Lab **3**, I started to write in **C/C++**.
+
 ## 2022 Fall Contest
 
 | ID   | Name                                                         | AC   |
@@ -22,6 +24,6 @@ Besides, it has an OJ system for SUSTech students.
 
 ## 2021 Fall [open](2021F/)
 
-I may not have enough time and energy to do this part in the rest of current semester.
+I may not have enough time and energy to do this part in the rest of current semester. (and next, next, ... next semester)
 
 （各种 quiz project exam，和剩下的 Lab，请问你们有什么头绪吗？）
