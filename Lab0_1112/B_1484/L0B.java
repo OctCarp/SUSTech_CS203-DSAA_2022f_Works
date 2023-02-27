@@ -1,24 +1,22 @@
-package B_1484;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class L0B {
-    static Card dealer;
-    static ArrayList<Card> paul = new ArrayList<>();
-
+public class Main {
     public static void main(String[] args) {
-        boolean allSame;
+        new Solution();
+    }
+}
+
+class Solution {
+    Card dealer;
+    ArrayList<Card> paul = new ArrayList<>();
+
+    Solution() {
         initial();
-        allSame = compareAll();
-        if (allSame) {
-            System.out.println("All in");
-        } else {
-            System.out.println("Fold");
-        }
+        System.out.println(compareAll() ? "All in" : "Fold");
     }
 
-    static void initial() {
+    void initial() {
         Scanner sc = new Scanner(System.in);
         String d = sc.next();
         dealer = new Card(d);
@@ -29,7 +27,7 @@ public class L0B {
         sc.close();
     }
 
-    static boolean compareAll() {
+    boolean compareAll() {
         for (int i = 0; i < 5; i++) {
             if (dealer.compare(paul.get(i))) {
                 return true;
@@ -42,12 +40,12 @@ public class L0B {
 class Card {
     char[] card = new char[2];
 
-    public Card(String aCard) {
+    Card(String aCard) {
         card[0] = aCard.charAt(0);
         card[1] = aCard.charAt(1);
     }
 
-    public boolean compare(Card p) {
+    boolean compare(Card p) {
         return this.card[0] == p.card[0] | this.card[1] == p.card[1];
     }
 }

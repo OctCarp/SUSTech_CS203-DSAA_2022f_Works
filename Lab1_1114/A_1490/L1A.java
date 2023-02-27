@@ -1,19 +1,24 @@
-package A_1490;
-
 import java.util.Scanner;
 
-public class L1A {
-    static int lengthA;
-    static int lineNum;
-    static int[] arrA;
-    static int[] bounds;
+public class Main {
 
     public static void main(String[] args) {
+        new Solution();
+    }
+}
+
+class Solution {
+    int lengthA;
+    int lineNum;
+    int[] arrA;
+    int[] bounds;
+
+    Solution(){
         readArr();
         results();
     }
 
-    static void readArr() {
+    void readArr() {
         Scanner sc = new Scanner(System.in);
         lengthA = sc.nextInt();
         lineNum = sc.nextInt();
@@ -21,6 +26,7 @@ public class L1A {
         for (int i = 0; i < lengthA; i++) {
             arrA[i] = sc.nextInt();
         }
+
         bounds = new int[lineNum * 2];
         for (int i = 0; i < lineNum; i++) {
             int x = sc.nextInt();
@@ -28,19 +34,21 @@ public class L1A {
             bounds[2 * i] = x;
             bounds[2 * i + 1] = y;
         }
+
         sc.close();
     }
 
-    static void results() {
+    void results() {
         for (int i = 0; i < bounds.length; i += 2) {
             printArr(bounds[i], bounds[i + 1]);
         }
     }
 
-    static int searchMin(int tar) {
+    int searchMin(int tar) {
         int start = 0;
         int end = arrA.length - 1;
         int mid = (start + end) / 2;
+
         if (arrA[end] <= tar) {
             return -1;
         } else {
@@ -58,8 +66,10 @@ public class L1A {
                         }
                         return mid + 1;
                     }
+
                     mid = (start + end) / 2;
                 }
+
                 if (arrA[end] == tar) {
                     return start;
                 } else return end;
@@ -67,10 +77,11 @@ public class L1A {
         }
     }
 
-    static int searchMax(int tar) {
+    int searchMax(int tar) {
         int start = 0;
         int end = arrA.length - 1;
         int mid = (start + end) / 2;
+
         if (arrA[start] >= tar) {
             return -1;
         } else {
@@ -88,27 +99,31 @@ public class L1A {
                     }
                     return mid - 1;
                 }
+
                 mid = (start + end) / 2;
             }
+
             if (arrA[start] == tar) {
                 return end;
             } else return start;
         }
     }
 
-    static void printArr(int x, int y) {
+    void printArr(int x, int y) {
         int min = searchMin(x);
         int max = searchMax(y);
+
         if (x == y) {
             System.out.println("NO");
         } else if (min == -1 || max == -1) {
             System.out.println("NO");
         } else {
             int num = max - min;
+
             if (num < 0) {
                 System.out.println("NO");
             } else {
-                System.out.println(String.format("YES %d",num + 1));
+                System.out.println("YES " + (num + 1));
             }
         }
     }

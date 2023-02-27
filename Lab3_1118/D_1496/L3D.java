@@ -1,28 +1,25 @@
-package D_1496;
-
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class L3D {
+public class Main {
     public static void main(String[] args) {
-        new Soln();
+        Solution s = new Solution();
     }
 }
 
-class Soln {
-    int n;
-    int m;
-    int q;
-    final Node head = new Node(0);
+class Solution {
+    private int n;
+    private int m;
+    private int q;
+    private final Node head = new Node(0);
 
-    Soln() {
+    Solution() {
         QReader in = new QReader();
         QWriter out = new QWriter();
         n = in.nextInt();
         m = in.nextInt();
         q = in.nextInt();
         fakeHead();
-
         Node pU = head.r;
         Node pL = head.d;
         Node p;
@@ -56,11 +53,9 @@ class Soln {
             p.d = new Node(0);
         }
         p.r = new Node(0);
-
         for (int i = 0; i < q; i++) {
             swap(in.nextInt(), in.nextInt(), in.nextInt(), in.nextInt(), in.nextInt(), in.nextInt());
         }
-
         p = head;
         Node print;
         for (int i = 0; i < n; i++) {
@@ -140,6 +135,17 @@ class Soln {
         }
         return tar;
     }
+
+    Node searchTail(Node tar, int l1, int l2) {
+        Node tail = tar;
+        for (int i = 0; i < l1 - 1; i++) {
+            tail = tar.d;
+        }
+        for (int i = 0; i < l2 - 1; i++) {
+            tail = tar.r;
+        }
+        return tail;
+    }
 }
 
 class Node {
@@ -206,3 +212,12 @@ class QWriter implements Closeable {
         }
     }
 }
+
+/**************************************************************
+ Problem: 1496
+ User: *********
+ Language: Java
+ Result: Accepted
+ Time:2592 ms
+ Memory:55748 kb
+ ****************************************************************/

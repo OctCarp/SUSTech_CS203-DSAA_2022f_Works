@@ -1,21 +1,26 @@
-package D_1489;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class L0D {
-    static int number;
-    static ArrayList<Tiles> players = new ArrayList<>();
+public class Main {
 
     public static void main(String[] args) {
+        new Solution();
+    }
+}
+
+class Solution {
+    int number;
+    ArrayList<Tiles> players = new ArrayList<>();
+
+    Solution() {
         read();
-        for (int i = 0; i < players.size(); i++) {
-            System.out.println(players.get(i));
+        for (Tiles player : players) {
+            System.out.println(player.win ? "Blessing of Heaven" : "Bad luck");
         }
     }
 
-    static void read() {
+    void read() {
         Scanner sc = new Scanner(System.in);
         number = sc.nextInt();
         for (int i = 0; i < number; i++) {
@@ -24,6 +29,7 @@ public class L0D {
         }
         sc.close();
     }
+
 }
 
 class Tiles {
@@ -34,21 +40,25 @@ class Tiles {
         for (int i = 0; i < 27; i += 2) {
             int num = s.charAt(i) - '0';
             char type = s.charAt(i + 1);
-            if (type == 'b') {
-                mah.add(num);
-            } else if ((type == 's')) {
-                mah.add(num + 10);
-            } else if ((type == 'w')) {
-                mah.add(num + 20);
-            } else if ((type == 'z')) {
-                mah.add(num + 30);
+
+            switch (type) {
+                case 'z':
+                    num += 10;
+                case 'w':
+                    num += 10;
+                case 's':
+                    num += 10;
+                case 'b':
+                default:
+                    mah.add(num);
             }
         }
+
         Collections.sort(mah);
         win = hu(mah);
     }
 
-    static boolean hu(ArrayList<Integer> mah) {
+    boolean hu(ArrayList<Integer> mah) {
         for (int num = 1; num <= 37; num++) {
             for (int i = 0; i < mah.size() - 1; i++) {
                 if (mah.get(i) == num && mah.get(i + 1) == num) {
@@ -62,7 +72,7 @@ class Tiles {
         return false;
     }
 
-    static boolean checkKeZiShunZi(ArrayList<Integer> qRemoved) {
+    boolean checkKeZiShunZi(ArrayList<Integer> qRemoved) {
         while (true) {
             if (qRemoved.size() == 0) {
                 return true;
@@ -72,6 +82,7 @@ class Tiles {
                 int a = qRemoved.get(0);
                 int b = qRemoved.get(1);
                 int c = qRemoved.get(2);
+
                 if (a < 30) {
                     if (a == b && a == c) {
                         qRemoved.remove(0);
@@ -90,15 +101,6 @@ class Tiles {
                     } else return false;
                 }
             }
-        }
-    }
-
-    @Override
-    public String toString() {
-        if (win) {
-            return "Blessing of Heaven";
-        } else {
-            return "Bad luck";
         }
     }
 }

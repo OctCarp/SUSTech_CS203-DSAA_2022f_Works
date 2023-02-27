@@ -1,54 +1,56 @@
-package A_1492;
-
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class L2A {
-    static int num;
-    static int[] ints;
-
+public class Main {
     public static void main(String[] args) {
-        qReader();
+        new Solution();
     }
+}
 
-    static void qReader() {
+class Solution {
+    int num;
+    int[] ints;
+
+    Solution() {
         QReader in = new QReader();
         QWriter out = new QWriter();
         num = in.nextInt();
         ints = new int[num];
+
         for (int i = 0; i < num; i++) {
             ints[i] = in.nextInt();
         }
+
         mergeSort(ints, num);
-        long  sum = 0L;
+
+        long sum = 0L;
         for (int i = 0; i < num / 2; i++) {
             sum += ((long) ints[i] * ints[num - 1 - i]);
         }
+
         out.print(sum);
+
         out.close();
     }
 
-    static void mergeSort(int[] arr, int n) {
-        if (n < 2) {
-            return;
-        }
+    void mergeSort(int[] arr, int n) {
+        if (n < 2) return;
+
         int mid = n / 2;
         int[] l = new int[mid];
         int[] r = new int[n - mid];
-        for (int i = 0; i < mid; i++) {
-            l[i] = arr[i];
-        }
-        for (int i = mid; i < n; i++) {
-            r[i - mid] = arr[i];
-        }
+        System.arraycopy(arr, 0, l, 0, mid);
+        System.arraycopy(arr, mid, r, 0, n - mid);
+
         mergeSort(l, mid);
         mergeSort(r, n - mid);
         merge(arr, l, r);
     }
 
-    static void merge(int[] m, int[] l, int[] r) {
+    void merge(int[] m, int[] l, int[] r) {
         int ll = l.length, rl = r.length;
         int i = 0, j = 0, k = 0;
+
         while (i < ll && j < rl) {
             if (l[i] <= r[j]) {
                 m[k++] = l[i++];

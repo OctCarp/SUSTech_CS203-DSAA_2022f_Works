@@ -1,44 +1,64 @@
-package B_1365;
-
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class L2B {
-    static int arrNum;
-    static int[][] arrS;
-
+public class Main {
     public static void main(String[] args) {
-        qReader();
+        new Solution();
+    }
+}
+
+class Solution {
+    int arrNum;
+    int[][] arrS;
+    Solution(){
+        QReader in = new QReader();
+        QWriter out = new QWriter();
+        arrNum = in.nextInt();
+        arrS = new int[arrNum][];
+
+        for (int i = 0; i < arrNum; i++) {
+            int l = in.nextInt();
+            int[] arr = new int[l];
+            for (int j = 0; j < l; j++) {
+                arr[j] = in.nextInt();
+            }
+            arrS[i] = arr;
+        }
+
+        for (int i = 0; i < arrNum; i++) {
+            out.println(reverse(arrS[i]));
+        }
+
+        out.close();
     }
 
-    static long reverse(int[] arr) {
+    long reverse(int[] arr) {
         return mergeSortTimes(arr, arr.length);
     }
 
-    static long mergeSortTimes(int[] arr, int n) {
+    long mergeSortTimes(int[] arr, int n) {
         long times = 0L;
-        if (n < 2) {
-            return 0;
-        }
+
+        if (n < 2) return 0;
+
         int mid = n / 2;
         int[] l = new int[mid];
         int[] r = new int[n - mid];
-        for (int i = 0; i < mid; i++) {
-            l[i] = arr[i];
-        }
-        for (int i = mid; i < n; i++) {
-            r[i - mid] = arr[i];
-        }
+        System.arraycopy(arr, 0, l, 0, mid);
+        System.arraycopy(arr, mid, r, 0, n - mid);
+
         times += mergeSortTimes(l, mid);
         times += mergeSortTimes(r, n - mid);
         times += mergeTimes(arr, l, r);
+
         return times;
     }
 
-    static long mergeTimes(int[] m, int[] l, int[] r) {
+    long mergeTimes(int[] m, int[] l, int[] r) {
         long times = 0L;
         int ll = l.length, rl = r.length;
         int i = 0, j = 0, k = 0;
+
         while (i < ll && j < rl) {
             if (l[i] <= r[j]) {
                 m[k++] = l[i++];
@@ -53,26 +73,8 @@ public class L2B {
         while (j < rl) {
             m[k++] = r[j++];
         }
-        return times;
-    }
 
-    static void qReader() {
-        QReader in = new QReader();
-        QWriter out = new QWriter();
-        arrNum = in.nextInt();
-        arrS = new int[arrNum][];
-        for (int i = 0; i < arrNum; i++) {
-            int l = in.nextInt();
-            int[] arr = new int[l];
-            for (int j = 0; j < l; j++) {
-                arr[j] = in.nextInt();
-            }
-            arrS[i] = arr;
-        }
-        for (int i = 0; i < arrNum; i++) {
-            out.println(reverse(arrS[i]));
-        }
-        out.close();
+        return times;
     }
 }
 

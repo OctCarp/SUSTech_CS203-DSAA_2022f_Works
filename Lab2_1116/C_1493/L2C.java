@@ -1,42 +1,46 @@
-package C_1493;
-
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class L2C {
-    static int num;
-    static int[] students;
-    static int[] arr;
-    static int max;
-
+public class Main {
     public static void main(String[] args) {
-        solution();
+        new Solution();
     }
+}
 
-    static void solution() {
+class Solution {
+    int num;
+    int[] students;
+    int[] arr;
+    int max;
+
+    Solution() {
         QReader in = new QReader();
         QWriter out = new QWriter();
         num = in.nextInt();
         students = new int[num];
+
         for (int i = 0; i < num; i++) {
             students[i] = in.nextInt();
         }
+
         mySort(students);
         out.println(max);
         out.println(myPrint());
+
         out.close();
     }
 
-    static String myPrint() {
+    String myPrint() {
         StringBuilder sb = new StringBuilder();
         sb.append(arr[0]);
         for (int i = 1; i < arr.length; i++) {
-            sb.append(String.format(" %d", arr[i]));
+            sb.append(" " + arr[i]);
         }
+
         return sb.toString();
     }
 
-    static void mySort(int[] stu) {
+    void mySort(int[] stu) {
         mergeSort(stu, num);
         arr = new int[num];
         int tris = num / 3;
@@ -53,19 +57,15 @@ public class L2C {
         }
     }
 
-    static void mergeSort(int[] arr, int n) {
-        if (n < 2) {
-            return;
-        }
+    void mergeSort(int[] arr, int n) {
+        if (n < 2) return;
+
         int mid = n / 2;
         int[] l = new int[mid];
         int[] r = new int[n - mid];
-        for (int i = 0; i < mid; i++) {
-            l[i] = arr[i];
-        }
-        for (int i = mid; i < n; i++) {
-            r[i - mid] = arr[i];
-        }
+        System.arraycopy(arr, 0, l, 0, mid);
+        System.arraycopy(arr, mid, r, mid - mid, n - mid);
+
         mergeSort(l, mid);
         mergeSort(r, n - mid);
         merge(arr, l, r);
@@ -74,6 +74,7 @@ public class L2C {
     static void merge(int[] m, int[] l, int[] r) {
         int ll = l.length, rl = r.length;
         int i = 0, j = 0, k = 0;
+
         while (i < ll && j < rl) {
             if (l[i] <= r[j]) {
                 m[k++] = l[i++];
